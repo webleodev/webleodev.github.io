@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adidas Store</title>
+</head>
+<body>
+    <header>
+        <section class="header-left">
+            <img src="./images/Logo.png" alt="">
+
+            <a href="#">adidas men</a>
+            <a href="#">adidas women</a>
+            <a href="#">adidas kids</a>
+        </section>
+
+        <section class="header-right">
+            <div class="search__input">
+                <input type="search" name="header-search" id="header-search">
+
+                <button>search</button>
+            </div>
+
+            <div class="join-login">
+                <a href="#">join</a> | <a href="#">log in</a>
+            </div>
+
+            <div class="cart">
+                cart
+
+                <span class="counter">
+                    [ <span id="cart-counter">0</span> ]
+                </span>
+            </div>
+
+            <div class="choice-countries">
+                <div class="inner-select">
+                    <span class="country" id='country-span'>
+                        usa
+                    </span>
+    
+                    <span class="select" id='select-icon'></span>
+                </div>
+                
+                <div class="outer-select" id='outer-select'>
+                    <ul class="countries">
+                        <li>RUS</li>
+                        <li>USA</li>
+                        <li>CAN</li>
+                        <li>CHN</li>
+                        <li>ARE</li>
+                        <li>POL</li>
+                        <li>DEU</li>
+                        <li>ARG</li>
+                        <li>BEL</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="menu-item" id="header-menu-item">
+                <div class="icon" id="header-icon">
+                    <span class="top-line"></span>
+                    <span class="middle-line" id="first-line"></span>
+                    <span class="middle-line" id="second-line"></span>
+                    <span class="bottom-line"></span>
+                </div>
+
+                <div class="menu" id="header-menu">
+                    <p>User menu</p>
+                    
+                    <ul>
+                        <li>Menu item</li>
+                        <li>Menu item</li>
+                        <li>Menu item</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <div class="main-wrapper">
+            <section class="left-side">
+                <div class="cost">
+                    <span class="currency">$</span>
+                    <span class="value">120</span>
+                </div>
+                
+                <div class="color" id="color-select-item">
+                    <div class="wrapper__box">
+                        <span class="color__text">color:</span>
+                        <span class="color__type" id="color__type">exclusive</span>
+                    </div>
+                    <img src="./images/Color.png" alt="color">
+                </div>
+
+                <div class="color-select__box" id="color-select__box">
+                    <span class="close-select__box" id="close-select__span">+</span>
+                    <div class="color-select__item" id="white"></div>
+                    <div class="color-select__item" id="black"></div>
+                    <div class="color-select__item" id="red"></div>
+                    <div class="color-select__item" id="blue"></div>
+                    <div class="color-select__item" id="yellow"></div>
+                    <div class="color-select__item" id="green"></div>
+                    <div class="color-select__item" id="exclusive"></div>
+                </div>
+                
+                <h2 id="explore">explore</h2>
+
+                <h4 id="reviews">reviews</h4>
+            </section>
+
+            <section class="middle">
+                <img src="./images/Footwear.png" alt="Footwear">
+            </section>
+
+            <section class="right-side">
+                <span class="company" id="company">adidas</span>
+
+                <span class="footwear-name" id="footwear-name">superstar</span>
+
+                <span class="footwear-type" id="footweartype">men's shoe</span>
+
+                <div class="size__box" id="size__box">
+                    <div class="size-icon" id="size-icon"></div>
+
+                    <span class="footwear-size" id="footwear-size">size</span>
+                </div>
+
+                <div class="choice-size__box" id="choice-size__box">
+                    <span class="close-size__box" id="close-size__span">+</span>
+
+                    <div class="choice-size__tabs">
+                        <div class="tab" id='uk-tab'>uk size</div>
+                        <div class="tab" id='eu-tab'>eu size</div>
+                    </div>
+
+                    <div class="choice-size__content">
+                        <div class="inner__tab" id='inner__tab'></div>
+                    </div>
+                </div>
+
+                <button id="add-to-cart">add to cart</button>
+            </section>
+        </div>
+
+        <div class="main-footer-wrapper">
+            <div class="img-item__select selected">1</div>
+            <div class="img-item__select"></div>
+            <div class="img-item__select"></div>
+            <div class="img-item__select"></div>
+            <div class="img-item__select"></div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="back-item" id="back-item">
+            <div class="back-icon" id="back-icon">&lt;</div>
+            <span class="back-text" id="back-text">back</span>
+        </div>
+
+        <div class="footer-items">
+            <a href="#">help</a>
+            <a href="#">shop</a>
+            <a href="#">customize</a>
+        </div>
+    </footer>
+
+<script src="index.js"></script>
+</body>
+</html>
