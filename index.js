@@ -1,5 +1,3 @@
-import './styles/styles.scss';
-
 const menuItem = document.getElementById('header-menu-item'),
     // Header's menu block
     choiceCountries = document.querySelector('.choice-countries'),
