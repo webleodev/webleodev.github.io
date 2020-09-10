@@ -12,16 +12,25 @@ const menuItem = document.getElementById('header-menu-item'),
     addToCartButton = document.getElementById('add-to-cart'),
     // Add to cart button
     mainFooterWrapper = document.getElementById('main-footer-wrapper'),
-    footwearPhotos = document.querySelectorAll('.footwear-photo');
+    footwearPhotos = document.querySelectorAll('.footwear-photo'),
     // Main footer wrapper with switching items (footwear photos)
+    outerSelect = document.getElementById('outer-select'),
+    outerSelectList = document.getElementById('outer-select__list');
 
 const ukArray = [2, 3, 4, 5, 6, 7, 8, 9],
-    euArray = [35, 36, 37, 38, 39, 40, 41, 42];
+    euArray = [35, 36, 37, 38, 39, 40, 41, 42],
+    countriesArray = ["RUS", "USA", "CAN", "CHN", "ARE", "POL", "DEU", "ARG", "BEL"];
 
-const fillBlock = (array, fillBlock) => {
-    const items = array.map(value => `<div class="size-item">${value}</div>`);
+const fillBlock = (array, arrayType, fillBlock) => {
+    if (arrayType === 'sizeArray') {
+        const items = array.map(value => `<div class="size-item">${value}</div>`);
 
-    fillBlock.innerHTML = items.join('');
+        fillBlock.innerHTML = items.join('');
+    } else if (arrayType === 'countriesArray') {
+        const items = array.map(value => `<li>${value}</li>`);
+
+        fillBlock.innerHTML = items.join('');
+    };
 };
 
 menuItem.addEventListener('click', () => {
@@ -33,11 +42,29 @@ menuItem.addEventListener('click', () => {
 });
 
 choiceCountries.addEventListener('click', () => {
-    const outerSelect = document.getElementById('outer-select'),
-        choiceCountriesIcon = document.getElementById('select-icon');
+    const choiceCountriesIcon = document.getElementById('select-icon'),
+        arrayType = 'countriesArray';
+
+    fillBlock(countriesArray, arrayType, outerSelectList);
 
     outerSelect.classList.toggle('open');
     choiceCountriesIcon.classList.toggle('open');
+});
+
+outerSelectList.addEventListener('click', (event) => {
+    const target = event.target,
+        countrySpan = document.getElementById('country-span'),
+        choiceCountriesIcon = document.getElementById('select-icon');
+
+    if (target.tagName.toLowerCase() === 'li') {
+        countrySpan.textContent = target.textContent;
+        outerSelect.classList.remove('open');
+        choiceCountriesIcon.classList.remove('open');
+
+        setTimeout(() => {
+            outerSelectList.innerHTML = '';
+        }, 200);
+    };
 });
 
 colorSelectItem.addEventListener('click', (event) => {
@@ -83,14 +110,15 @@ choiceSizeBlock.addEventListener('click', (event) => {
         };
 
         if (target.classList.contains('selected')) {
-            const selectedId = target.id;
+            const selectedId = target.id,
+                arrayType = 'sizeArray';
 
             innerTab.innerHTML = '';
 
             if (selectedId === 'uk-tab') {
-                fillBlock(ukArray, innerTab);
+                fillBlock(ukArray, arrayType, innerTab);
             } else if (selectedId === 'eu-tab') {
-                fillBlock(euArray, innerTab);
+                fillBlock(euArray, arrayType, innerTab);
             };
         };
     };
@@ -142,8 +170,6 @@ mainFooterWrapper.addEventListener('click', (event) => {
             if (target === itemSwitch[i]) {
                 itemSwitch[i].classList.add('selected');
                 itemSwitch[i].textContent = i+1;
-            } else {
-                event.preventDefault();
             };
         };
     };    

@@ -9,7 +9,7 @@
 
     font-family: 'Poppins', sans-serif;
 
-    text-transform: uppercase;
+    text-transform: uppercase!important;
 
     user-select: none;
 }
@@ -59,6 +59,8 @@ header {
     }
 
     .header-right {
+        position: relative;
+
         display: flex;
 
         width: 60.5%;
@@ -148,7 +150,7 @@ header {
                     border-left: solid 0.2vw #313131;
                     border-bottom: solid 0.2vw #313131;
 
-                    transform: rotate(-45deg) translateY(-50%);
+                    transform: rotate(-45deg) translateY(-30%);
 
                     transition: transform .2s ease-in-out,
                                 border-color .2s ease-in-out;
@@ -158,12 +160,15 @@ header {
                     }
                 }
             }
+        }
+
+        .choice-countries__select {
+            position: absolute;
+            right: 17vw;
 
             .outer-select {
                 position: absolute;
-
-                bottom: -17vw;
-                left: -5vw;
+                bottom: -18vw;
 
                 width: 12vw;
                 max-height: 15vw;
@@ -172,6 +177,7 @@ header {
 
                 text-align: center;
 
+                overflow: hidden;
                 overflow-y: scroll;
 
                 opacity: 0;
@@ -185,8 +191,8 @@ header {
                 border-radius: .4vw;
 
                 transition: bottom .2s ease-in-out,
-                    opacity .2s ease-in-out,
-                    visibility .1s ease-in-out .1s;
+                            opacity .2s ease-in-out,
+                            visibility .1s ease-in-out .1s;
 
                 ul.countries {
                     li {
@@ -202,7 +208,7 @@ header {
                 }
 
                 &.open {
-                    bottom: -16vw;
+                    bottom: -17vw;
 
                     opacity: 1;
 
@@ -535,6 +541,8 @@ main {
             h4 {
                 margin: .2vw 1.7vw 0 0;
 
+                font-size: 1.5vw;
+
                 cursor: pointer;
 
                 transition: margin .2s ease-in-out;
@@ -721,6 +729,8 @@ main {
 
                             margin: .5vw auto;
 
+                            font-size: 1.3vw;
+
                             border: solid .1vw #313131;
                             border-radius: 50%;
 
@@ -755,6 +765,7 @@ main {
                 margin-top: .3vw;
                 padding: .7vw 1.3vw;
 
+                font-size: 1.2vw;
                 font-weight: 700;
 
                 color: #fff;
@@ -912,6 +923,16 @@ header {
                     color: #000000;
 
                     border-color: #000000;
+                }
+            }
+        }
+
+        .choice-countries__select {
+            .outer-select {
+                ul li:hover {
+                    transform: scale(1.1);
+
+                    color: #000000;
                 }
             }
         }

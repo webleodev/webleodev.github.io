@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adidas Store</title>
     <link rel="stylesheet" href="./styles/css/styles.min.css">
+    <link rel="stylesheet" href="./styles/css/media.min.css">
+    <link rel="stylesheet" href="./styles/css/mobile.min.css">
 </head>
 <body>
     <header>
@@ -18,8 +20,6 @@
 
         <section class="header-right">
             <div class="search__input">
-                <input type="search" name="header-search" id="header-search">
-
                 <button>search</button>
             </div>
 
@@ -43,19 +43,11 @@
     
                     <span class="select" id='select-icon'></span>
                 </div>
-                
+            </div>
+
+            <div class="choice-countries__select">
                 <div class="outer-select" id='outer-select'>
-                    <ul class="countries">
-                        <li>RUS</li>
-                        <li>USA</li>
-                        <li>CAN</li>
-                        <li>CHN</li>
-                        <li>ARE</li>
-                        <li>POL</li>
-                        <li>DEU</li>
-                        <li>ARG</li>
-                        <li>BEL</li>
-                    </ul>
+                    <ul class="countries" id='outer-select__list'></ul>
                 </div>
             </div>
 

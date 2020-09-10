@@ -1,0 +1,235 @@
+@media only screen and (max-width: 1440px) {
+    header {
+        .header-right {
+            .menu-item {
+                .icon span {
+                    border-width: 1px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    header {
+        .header-right {
+            .menu-item {
+                .menu {
+                    padding: 1.5vw;
+
+                    p {
+                        font-size: 1vw;
+                    }
+
+                    ul li {
+                        margin: 1.5vw 0;
+
+                        font-size: .9vw;
+                    }
+                }
+            }
+        }
+    }
+
+    main {
+        .main-footer-wrapper {
+            .img-item__select {
+                width: 1.5vw;
+                height: 1.5vw;
+
+                line-height: 1.5vw;
+
+                font-size: .8vw;
+
+                &.selected {
+                    width: 1.5vw;
+                }
+            }
+        }
+    }
+
+    footer {
+        .back-item {
+            .back-icon {
+                display: none;
+            }
+
+            .back-text {
+                font-size: 1vw;
+            }
+        }
+
+        .footer-items {
+            a {
+                font-size: 1vw;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    header {
+        .header-left {
+            a {
+                font-size: 1vw;
+            }
+        }
+
+        .header-right * {
+            font-size: 1vw;
+        }
+    }
+
+    main {
+        .main-wrapper {
+            .left-side {
+                width: 18%;
+
+                .color-select__box {
+                    top: 26vw;
+                    left: 9.5vw;
+                }
+            }
+    
+            .middle {
+                margin: 0 auto;
+            }
+    
+            .right-side {
+                width: 18%;
+    
+                padding-left: 0;
+
+                .footwear-name {
+                    margin-top: .5vw;
+                }
+
+                .choice-size__box {
+                    width: 16vw;
+
+                    top: 25vw;
+                    left: -7.5vw;
+
+                    .choice-size__tabs {
+                        .tab {
+                            font-size: 1.5vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        .back-item {
+            .back-text {
+                font-size: 1.1vw;
+            }
+        }
+
+        .footer-items {
+            a {
+                font-size: 1.1vw;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        .header-left {
+            img {
+                display: none;
+            }
+
+            a {
+                font-size: 1.2vw;
+            }
+        }
+
+        .header-right * {
+            font-size: 1.2vw;
+        }
+
+        .header-right {
+            .menu-item {
+                .menu {
+                    top: 4.5vw;
+                    left: -6vw;
+
+                    width: 14vw;
+
+                    padding: 1vw;
+
+                    p {
+                        font-size: 1.25vw;
+                    }
+
+                    ul li {
+                        font-size: 1.15vw;
+                    }
+
+                    &.open {
+                        top: 3.5vw;
+                    }
+                }
+            }
+        }
+    }
+
+    main {
+        .main-wrapper {
+            .left-side {
+                .color {
+                    .wrapper__box {
+                        span {
+                            height: 1.25vw;
+                            max-height: 1.25vw;
+
+                            font-size: 1.25vw;
+                        }
+                    }
+
+                    img {
+                        width: 3vw;
+                        height: 3vw;
+                        max-height: 3vw;
+                    }
+                }
+
+                .color-select__box {
+                    top: 26.5vw;
+                }
+            }
+        }
+
+        .main-footer-wrapper {
+            .img-item__select {
+                width: 2vw;
+                height: 2vw;
+
+                line-height: 2vw;
+
+                font-size: 1.25vw;
+
+                &.selected {
+                    width: 2vw;
+                }
+            }
+        }
+    }
+
+    footer {
+        .back-item {
+            .back-text {
+                font-size: 1.25vw;
+            }
+        }
+
+        .footer-items {
+            a {
+                font-size: 1.25vw;
+            }
+        }
+    }
+}

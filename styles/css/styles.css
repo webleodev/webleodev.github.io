@@ -1,13 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url(/node_modules/normalize.css/normalize.css);
-@import url(/node_modules/slick-carousel/slick/slick.css);
-@import url(/node_modules/magnific-popup/dist/magnific-popup.css);
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
-  text-transform: uppercase;
+  text-transform: uppercase !important;
   user-select: none;
 }
 
@@ -48,6 +46,7 @@ header .header-left a {
 }
 
 header .header-right {
+  position: relative;
   display: flex;
   width: 60.5%;
   align-items: center;
@@ -121,7 +120,7 @@ header .header-right .choice-countries .inner-select .select {
   padding: 0.2vw;
   border-left: solid 0.2vw #313131;
   border-bottom: solid 0.2vw #313131;
-  transform: rotate(-45deg) translateY(-50%);
+  transform: rotate(-45deg) translateY(-30%);
   transition: transform .2s ease-in-out, border-color .2s ease-in-out;
 }
 
@@ -129,14 +128,19 @@ header .header-right .choice-countries .inner-select .select.open {
   transform: rotate(-45deg) rotateZ(180deg);
 }
 
-header .header-right .choice-countries .outer-select {
+header .header-right .choice-countries__select {
   position: absolute;
-  bottom: -17vw;
-  left: -5vw;
+  right: 17vw;
+}
+
+header .header-right .choice-countries__select .outer-select {
+  position: absolute;
+  bottom: -18vw;
   width: 12vw;
   max-height: 15vw;
   padding: 0 0 0 1vw;
   text-align: center;
+  overflow: hidden;
   overflow-y: scroll;
   opacity: 0;
   visibility: hidden;
@@ -146,15 +150,15 @@ header .header-right .choice-countries .outer-select {
   transition: bottom .2s ease-in-out, opacity .2s ease-in-out, visibility .1s ease-in-out .1s;
 }
 
-header .header-right .choice-countries .outer-select ul.countries li {
+header .header-right .choice-countries__select .outer-select ul.countries li {
   list-style: none;
   margin: 1vw 0;
   cursor: pointer;
   transition: transform .2s ease-in-out, color .2s ease-in-out;
 }
 
-header .header-right .choice-countries .outer-select.open {
-  bottom: -16vw;
+header .header-right .choice-countries__select .outer-select.open {
+  bottom: -17vw;
   opacity: 1;
   visibility: visible;
   z-index: 1;
@@ -403,6 +407,7 @@ main .main-wrapper .left-side h2 {
 
 main .main-wrapper .left-side h4 {
   margin: .2vw 1.7vw 0 0;
+  font-size: 1.5vw;
   cursor: pointer;
   transition: margin .2s ease-in-out;
 }
@@ -544,6 +549,7 @@ main .main-wrapper .right-side .choice-size__box .choice-size__content .inner__t
   width: 2.5vw;
   height: 2.5vw;
   margin: .5vw auto;
+  font-size: 1.3vw;
   border: solid .1vw #313131;
   border-radius: 50%;
   cursor: pointer;
@@ -567,6 +573,7 @@ main .main-wrapper .right-side .choice-size__box .choice-size__content .inner__t
 main .main-wrapper .right-side button {
   margin-top: .3vw;
   padding: .7vw 1.3vw;
+  font-size: 1.2vw;
   font-weight: 700;
   color: #fff;
   background-color: #000;
@@ -667,6 +674,11 @@ header .header-right .cart:hover span {
 header .header-right .choice-countries:hover .inner-select span {
   color: #000000;
   border-color: #000000;
+}
+
+header .header-right .choice-countries__select .outer-select ul li:hover {
+  transform: scale(1.1);
+  color: #000000;
 }
 
 header .header-right .menu-item:hover .icon span {
