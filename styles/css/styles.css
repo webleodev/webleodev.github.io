@@ -271,6 +271,10 @@ main .main-wrapper .left-side {
   user-select: none;
 }
 
+main .main-wrapper .left-side .open-left-side__button {
+  display: none;
+}
+
 main .main-wrapper .left-side .cost {
   height: 9.7vw;
   max-height: 9.7vw;
@@ -426,6 +430,10 @@ main .main-wrapper .middle img {
 main .main-wrapper .right-side {
   position: relative;
   padding-left: 1vw;
+}
+
+main .main-wrapper .right-side .open-right-side__button {
+  display: none;
 }
 
 main .main-wrapper .right-side span {

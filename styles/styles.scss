@@ -373,6 +373,10 @@ main {
 
             user-select: none;
 
+            .open-left-side__button {
+                display: none;
+            }
+
             .cost {
                 height: 9.7vw;
                 max-height: 9.7vw;
@@ -567,6 +571,10 @@ main {
             position: relative;
             
             padding-left: 1vw;
+
+            .open-right-side__button {
+                display: none;
+            }
 
             span {
                 display: block;

@@ -15,7 +15,9 @@ const menuItem = document.getElementById('header-menu-item'),
     footwearPhotos = document.querySelectorAll('.footwear-photo'),
     // Main footer wrapper with switching items (footwear photos)
     outerSelect = document.getElementById('outer-select'),
-    outerSelectList = document.getElementById('outer-select__list');
+    outerSelectList = document.getElementById('outer-select__list'),
+    leftSideButton = document.getElementById('open-left-side'),
+    rightSideButton = document.getElementById('open-right-side');
 
 const ukArray = [2, 3, 4, 5, 6, 7, 8, 9],
     euArray = [35, 36, 37, 38, 39, 40, 41, 42],
@@ -188,4 +190,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
         mainFooterWrapper.append(item);
     };
+});
+
+leftSideButton.addEventListener('click', () => {
+    const leftSide = document.getElementById('left-side'),
+        rightSide = document.getElementById('right-side');
+
+    leftSideButton.classList.toggle('close');
+    leftSide.classList.toggle('open');
+    rightSide.classList.toggle('hidden');
+});
+
+rightSideButton.addEventListener('click', () => {
+    const rightSide = document.getElementById('right-side'),
+        leftSide = document.getElementById('left-side');
+
+    rightSideButton.classList.toggle('close');
+    rightSide.classList.toggle('open');
+    leftSide.classList.toggle('hidden');
 });
